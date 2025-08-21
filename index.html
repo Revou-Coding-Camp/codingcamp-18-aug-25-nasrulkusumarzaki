@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📌 To Do List</h1>
+
+  <div class="todo-container">
+    <div class="stats">
+      <div>Total: <span id="total">0</span></div>
+      <div>Completed: <span id="completed">0</span></div>
+      <div>Pending: <span id="pending">0</span></div>
+    </div>
+
+    <input type="text" id="taskInput" placeholder="Add a todo...">
+    <button onclick="addTask()">Add</button>
+    <button onclick="deleteAll()">Delete All</button>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
