@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To Do List</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List Application</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>📌 To Do List</h1>
-
-  <div class="todo-container">
-    <div class="stats">
-      <div>Total: <span id="total">0</span></div>
-      <div>Completed: <span id="completed">0</span></div>
-      <div>Pending: <span id="pending">0</span></div>
+    <div class="todo-card">
+        <h2>To Do List App</h2>   
+        <form action="#" class="todo-form" id="todo_form">
+            <div class="form-input">
+                <input type="text" id="task" 
+                class="input-field" 
+                placeholder="what will you do" 
+                required/>
+            </div>
+            <div class="form-input">
+                <input type="date" id="when" class="input-field" required />
+            </div>
+            <div class="tombol">
+                <button type="submit" id="simpan" title="simpan todo">Save It
+                /<button>
+            </div>
+        </form>    
     </div>
-
-    <input type="text" id="taskInput" placeholder="Add a todo...">
-    <button onclick="addTask()">Add</button>
-    <button onclick="deleteAll()">Delete All</button>
-
-    <ul id="taskList"></ul>
-  </div>
-
-  <script src="script.js"></script>
+    
+    
 </body>
 </html>
