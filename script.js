@@ -62,6 +62,9 @@ function renderTasks() {
     li.appendChild(deleteBtn);
     taskList.appendChild(li);
   });
+
+  updateSummary()
+  
 }
 
 function toggleComplete(index) {
@@ -118,4 +121,17 @@ function showNotification(message) {
       }
     });
   }
+}
+
+function updateSummary() {
+  const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+  const total = tasks.length;
+  const completed = tasks.filter(t => t.completed).length;
+  const pending = total - completed;
+  const progress = total > 0 ? Math.round((completed / total) * 100) : 0;
+
+  document.getElementById("totalTasks").textContent = total;
+  document.getElementById("completedTasks").textContent = completed;
+  document.getElementById("pendingTasks").textContent = pending;
+  document.getElementById("progress").textContent = progress + "%";
 }
